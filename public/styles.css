@@ -1,0 +1,169 @@
+body {
+    font-family: sans-serif;
+    color: rgb(121, 72, 255);
+}
+
+#register-page {
+    background-color:  rgb(133, 89, 253);
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+#register-block {
+    background-color: rgb(229, 197, 241);
+    border-radius: 7px;
+    box-shadow: white 3px 3px 5px 3px;
+    display: block;
+    margin: auto;
+    width: 700px;
+    height: 500px;
+    text-align: left;
+    padding-top: 40px;
+    margin-top: 40px;
+    
+}
+
+#home-page {
+    background-image: linear-gradient(180deg, rgb(255, 255, 255), rgb(133, 89, 253));
+    height: 590px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: larger;
+    color: rgb(138, 96, 255);
+}
+
+#login-page {
+    background-color:  rgb(133, 89, 253);
+    padding:130px 220px
+}
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.3rem;
+    line-height: 35px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+.logo-img {
+    height: 90px;
+    width: 120px;
+}
+
+#intro-block {
+    text-align: left;
+    color: white;
+}
+
+.logo {
+    font-family: 'Press Start 2P', cursive;
+    padding-top: 40px;
+}
+
+.brand-name {
+    /* color: rgb(138, 96, 255); */
+    position: relative;
+    bottom: 25px;
+    right: 10px;
+    font-size: larger;
+}
+
+.inline {
+    display: inline;
+}
+
+input {
+    height: 36px;
+    width: 270px;
+    display: block;
+    border-radius: 5px;
+    border: rgb(156, 155, 155) 2px solid;
+
+}
+
+#username {
+    margin-top: 50px;
+}
+
+#password {
+    margin-bottom: 20px;
+}
+
+#content {
+    margin-top: 150px;
+}
+
+#brain-pic {
+    height: 200px;
+    width: 240px;
+    margin-bottom: 30px;
+}
+
+button {
+    height: 60px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    box-shadow: 2px 2px 4px 3px rgb(154, 118, 255);
+
+}
+.login {
+    border: solid rgb(121, 72, 255) 3px;
+    color: rgb(138, 96, 255);;
+    
+}
+.sign-up {
+    border: none;
+    background-color: rgb(121, 72, 255);
+    color: white;
+    margin-right: 20px;
+}
+button:hover {
+    border: white;
+    box-shadow: 3px 3px 4px 5px rgb(163, 130, 255);
+}
+
+.sign-up:hover {
+    border: rgb(102, 61, 168) solid 2px;
+}
+
+
+#login-btn {
+    width: 275px;
+    height: 36px;
+    color: white;
+    background-color:  rgb(121, 72, 255);
+    border: none;
+    margin-bottom: 15px;
+}
+
+.login-block {
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border-radius: 7px;
+    margin: auto;
+    text-align: center;
+}
+
+label {
+    font-weight: bolder;
+    font-size: 1.6rem;
+    display: inline-block;
+    width: 280px;
+    height: 60px;
+    padding-left: 60px;
+
+}

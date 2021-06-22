@@ -1,0 +1,36 @@
+<%- include("partials/header");  %> 
+
+    <h1 id="level-title">Press A Key to Start</h1>
+
+  <div class="block-container">
+    <div class="row">
+      <div type="button" id="green" class="btn green"></div>
+      <div type="button" id="red" class="btn red"></div>
+    </div>
+
+    <div class="row">
+      <div type="button" id="yellow" class="btn yellow"></div>
+      <div type="button" id="blue" class="btn blue"></div>
+    </div>
+
+  </div>
+  <div id="scores">
+      <form action="/scores" method="POST">
+        <label for="avgScore" id="avg">Your Score -</label> <br>
+        <input class="textBox" type="text" name="averageScore" id="avgScore" value="Play atleast 3 rounds" readonly>
+        <input type="hidden" name="username" value= <%= username %>>
+        <button id="submit" class="disabled" type="submit">Submit Scores</button>
+      </form>  
+  </div>
+
+    <script src="/simonGameScript.js"></script>
+
+    <!-- JS, Popper.js, and jQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

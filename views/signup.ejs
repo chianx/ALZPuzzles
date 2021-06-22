@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" href="logo.png">
+
+    <!-- googe fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        
+        input {
+            display: inline-block;
+        }
+        button {
+            margin-left: 275px;
+            margin-top: 20px;
+        }
+
+        .brand-name {
+            font-size: 0.9rem;
+            bottom: 14px;
+
+        }
+        img {
+            height: 60px;
+            width: 85px;
+        }
+        p {
+            margin-left: 50px;
+        }
+
+    </style>
+
+</head>
+<body id="register-page">
+    <!-- <h1 style="color: white; padding: 50px;">Sign up here for free</h1> -->
+    <div class="logo">
+        <img src="images/logo.png" alt="logo-img" class="inline">
+        <h5 class="inline brand-name" style="color: white;">ALZ Puzzles</h5>
+    </div>
+
+    <div id="register-block">
+
+        <form action="/signup" method="POST">
+            <label for="name">Name :</label> <input type="text" name="name"> <br>
+
+            <label for="email">Email address :</label> <input type="email" name="email" id="email"> <br>
+
+            <label for="username">Username :</label> <input type="text" name="username"> <br>
+
+            <label for="pass1">Password :</label> <input type="password" name="pass1" id=""> <br>
+
+            <label for="pass2">Confirm Password :</label> <input type="password" name="pass2" id=""> <br>
+
+            <label for="age">Birthday :</label> <input type="date" name="dob" id="">
+
+            <button class="sign-up" type="submit">Sign up</button>
+            <p style="color: red;"><%= errorMessage %></p>
+    
+        </form>
+
+    </div>
+    
+</body>
+</html>

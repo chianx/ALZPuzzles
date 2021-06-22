@@ -1,0 +1,170 @@
+<%- include("partials/header");  %> 
+
+
+<h1 id="greet"></h1>
+<h5 class="line">Check your performance here</h5>
+
+<div class="stats">
+    <h2 class="game-name">Simon Game - Stats</h2>
+    <div id="graph"></div>
+    <p id="topScore" class="stat"></p>
+    <p id="status" class="stat"></p>
+</div>
+
+<div class="stats" id="card-game-card">
+    <h2 class="game-name">Card Game - Stats</h2>
+    <div id="cardGraph"></div>
+    <p id="topScore2" class="stat"></p>
+    <p id="status2" class="stat"></p>
+
+</div>
+
+<input type="hidden" id="simon" value="<%= simonScore %>">
+<input type="hidden" id="name" value="<%= name %>">
+
+<input type="hidden" id="card" value="<%= cardScore %>">
+<input type="hidden" id="cardDate" value="<%= cardDate %>">
+<input type="hidden" id="simonDate" value="<%= simonDate %>">
+
+
+<script>
+
+    var simonScores = $("#simon").val();
+    var simonDate = $("#simonDate").val();
+    console.log(simonScores + "");
+    var simonData = [];
+    var score = "";
+    for(var i=0; i<simonScores.length;i++) {
+        if (simonScores.substring(i, i+1) != ',') {
+            score = score + simonScores.substring(i, i+1);
+        }else {
+            simonData.push(parseFloat(score));
+            score = "";
+        }
+    }
+    simonData.push(parseFloat(score));
+    console.log(simonData);
+
+    var entries = [];
+    var date = "";
+    for (var i=0;i<simonDate.length;i++) {
+        if (simonDate.substring(i, i+1) != ',') {
+            date = date + simonDate.substring(i, i+1);
+        }else {
+            entries.push(date);
+            date = "";
+        }
+    }
+    entries.push(date);
+
+    GRAPH = document.getElementById('graph');
+	Plotly.newPlot( GRAPH, [{
+	x: entries,
+	y: simonData }], {
+	margin: { t: 30, b:30, l:30, r:30} } );
+
+    var name = $("#name").val();
+    var fName = "";
+
+    for(var i=0; i<name.length; i++) {
+        if (name.substring(i, i+1) != ' ') {
+            fName = fName + name.substring(i, i+1);
+        }else {
+            i=100;
+        }
+    }
+    $("#greet").text("Welcome " + fName);
+
+    var bestScore = simonData[0]
+    var status;
+    for (var i=0; i<simonData.length; i++) {
+        if (simonData[i]>bestScore) {
+            bestScore = simonData[i];
+        }
+    }
+    bestScore = Math.round((bestScore + Number.EPSILON) * 100) / 100 ;
+    $("#topScore").text("Highest Score : " + bestScore);
+    
+    var l = simonData.length;
+    var status = "Keep going";
+    if(l>10) {
+        if(simonData[l-1]>simonData[l-2] && simonData[l-2]>simonData[l-3] && simonData[l-2]>simonData[l-3]) {
+            status = "You are performing good.";
+        }else if(simonData[l-1]<simonData[l-2] && simonData[l-2]<simonData[l-3] && simonData[l-2]<simonData[l-3]) {
+             status = "Poor Performance.";
+        }else if(bestScore === simonData[l-1] && simonData[l-2]>simonData[l-3]){
+             status = "You are at your best."
+        }
+    }else {
+        status = "Play more chances..."
+    }
+
+    $("#status").text("Satus : "+ status);
+
+
+    var cardScores = $("#card").val();
+    var cardDate = $("#cardDate").val();
+    var cardData = [];
+    console.log(cardScores);
+    score = "";
+    for(var i=0; i<cardScores.length;i++) {
+        if (cardScores.substring(i, i+1) != ',') {
+            score = score + cardScores.substring(i, i+1);
+        }else {
+            cardData.push(parseFloat(score));
+            score = "";
+        }
+    }
+    cardData.push(parseFloat(score));
+    console.log(cardData);
+
+    entries = [];
+    var date = "";
+    for (var i=0;i<cardDate.length;i++) {
+        if (cardDate.substring(i, i+1) != ',') {
+            date = date + cardDate.substring(i, i+1);
+        }else {
+            entries.push(date);
+            date = "";
+        }
+    }
+    entries.push(date);
+
+
+    GRAPH = document.getElementById('cardGraph');
+	Plotly.newPlot( GRAPH, [{
+	x: entries,
+	y: cardData }], {
+	margin: { t: 30, b:30, l:30, r:30} } );
+
+    $("#drop-button").click(function() {
+        $("#myDropdown").toggleClass("hidden");
+    });
+
+    bestScore = cardData[0]
+    status;
+    for (var i=0; i<cardData.length; i++) {
+        if (cardData[i]>bestScore) {
+            bestScore = cardData[i];
+        }
+    }
+    bestScore = Math.round((bestScore + Number.EPSILON) * 100) / 100 ;
+    $("#topScore2").text("Highest Score : " + bestScore);
+    
+    l = cardData.length;
+    status = "Keep going";
+    if(l>10) {
+        if(cardData[l-1]>cardData[l-2] && cardData[l-2]>cardData[l-3] && cardData[l-2]>cardData[l-3]) {
+            status = "You are performing good.";
+        }else if(cardData[l-1]<cardData[l-2] && cardData[l-2]<cardData[l-3] && cardData[l-2]<cardData[l-3]) {
+             status = "Poor Performance.";
+        }else if(bestScore === cardData[l-1] && cardData[l-2]>cardData[l-3]){
+             status = "You are at your best."
+        }
+    }else {
+        status = "Play more chances..."
+    }
+
+    $("#status2").text("Satus : "+ status);
+
+</script>

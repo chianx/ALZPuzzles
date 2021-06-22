@@ -1,0 +1,22 @@
+<%- include("partials/header");  %> 
+
+<p id="time"></p>
+
+<button id="start-btn">Start</button>
+
+<div>
+<div class="grid"></div>
+<div id="scores" class="card-score">
+  <form action="/cardScore" method="POST">
+    <label for="avgScore" id="avg">Your Score -</label> <br>
+    <input class="textBox" type="text" name="averageScore" id="avgScore" value=" Play atleast 3 rounds" readonly>
+    <input type="hidden" name="username" value= <%= username %>>
+    <button id="submit" class="disabled" type="submit">Submit Scores</button>
+  </form>  
+</div>
+</div>
+
+<script src="/cardGame.js"></script>
+
+</body>
+</html>

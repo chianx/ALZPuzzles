@@ -1,0 +1,268 @@
+body {
+    background-color:  rgb(186, 161, 255);
+    text-align: center;    
+}
+
+h1 {
+    padding: 40px;
+    font-weight: bolder;
+    font-size: 3em;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+.titleBar {
+    padding: 0;
+}
+
+.navbar {
+    background-color:  rgb(133, 89, 253);
+}
+.navbar-brand {
+    font-family: 'Press Start 2P', cursive;
+}
+.logo {
+    padding: 15px 10px;
+    color: white;
+}
+
+.dropbtn {
+    color: white;
+    background-color:  rgb(133, 89, 253);
+    border: none;
+    font-size: 1.1rem;
+}
+.dropdown-content {
+    width: 135px;
+    display: block;
+    text-align: left;
+    color:  rgb(133, 89, 253);
+    font-size: 1.1rem;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+#myDropdown {
+    margin-top: 5px;
+    width: 135px;
+    height: 125px;
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 3px 3px 10px rgb(158, 158, 158);
+    border-radius: 5px;
+}
+
+.dropdown-content:hover {
+    background-color: rgb(233, 233, 233);
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.red, .green, .yellow, .blue {
+    height: 200px;
+    margin: 28px auto;
+    width: 200px;
+    border-radius: 30px; 
+    text-align: center;
+    border: solid 12px black;
+}
+
+#level-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    color: #FEF2BF;
+}
+
+.block-container {
+    display: inline-block;
+    width: 600px;
+
+}
+  
+.btn {
+    margin: 25px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border: 10px solid black;
+    border-radius: 20%;
+}
+  
+.game-over {
+    background-color: red;
+    opacity: 0.8;
+}
+  
+.red {
+    background-color: red;
+}
+  
+.green {
+    background-color: green;
+}
+  
+.blue {
+    background-color: blue;
+}
+  
+.yellow {
+    background-color: yellow;
+}
+  
+.pressed {
+    box-shadow: 4px 2px 20px rgb(158, 158, 158);
+    background-color: grey;
+}
+
+#scores {
+    display: inline-block;
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 10px rgb(158, 158, 158);
+    position: relative;
+    bottom: 230px;
+    left: 20px;
+}
+
+label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: medium;
+    color: rgb(133, 89, 253);
+    margin-top: 10px;
+}
+
+.textBox {
+    width: 170px;
+    height: 35px;
+    border-radius: 5px;
+    border: rgb(133, 89, 253) solid 1.6px;
+    margin-top: 10px;
+}
+
+#submit {
+    border-radius: 7px;
+    background-color: rgb(133, 89, 253);
+    color: white;
+    width: 200px;
+    height: 50px;
+    border: none;
+    margin-top: 35px;
+    box-shadow: 2px 2px 10px rgb(158, 158, 158);
+    font-size: 1.1rem;
+
+}
+
+.disabled {
+    opacity: 0.75;
+    background-color: rgb(133, 89, 253);
+    box-shadow: 2px 2px 8px rgb(109, 109, 109);
+}
+
+#graph {
+    display: inline-block;
+    margin-top: 30px;
+    width: 400px;
+    height: 250px;
+}
+
+#greet {
+    color: #FEF2BF;
+    font-size: 2.7rem;
+    padding: 0;
+    margin-top: 30px;
+}
+.line {
+    color:  rgb(255, 255, 255);
+}
+
+.game-name {
+    padding: 0;
+    margin: 0;
+}
+
+.stats {
+    display: inline-block;
+    border-radius: 12px;
+    margin: 50px;
+    padding: 20px;
+    width: 500px;
+    height: 450px;
+    background-color:  #FEF2BF;
+    box-shadow: 3px 3px 15px rgb(158, 158, 158);
+    position: absolute;
+    left: 10%;
+}
+
+.stat {
+    color: rgb(133, 89, 253);
+    font-size: 1.3rem;
+    font-weight: bolder;
+    /* position: relative; */
+    /* left: 237px; */
+    margin-top: 5px;
+}
+#status {
+    margin-top: 1px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+    height: 300px;
+    margin: 60px 0 0 200px;
+}
+
+.card {
+    height: 130px;
+    width: 130px;
+    border: 3px white solid;
+}
+
+#time {
+    padding-top: 30px;
+    font-size: 1.5rem;
+    font-family: cursive;
+}
+
+#start-btn {
+    color: white;
+    background-color: rgb(0, 158, 0);
+    border: none;
+    width: 130px;
+    height: 40px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.disabled-sart-btn {
+    opacity: 0.75;
+    background-color:rgb(107, 216, 107);
+    box-shadow: 2px 2px 8px rgb(109, 109, 109);
+}
+
+.card-score {
+    margin-left: 650px;
+}
+
+#card-game-card {
+    margin-left: 700px;
+    position: absolute;
+    right: 30%;
+}
+
+#cardGraph {
+    display: inline-block;
+    margin-top: 30px;
+    width: 400px;
+    height: 250px;
+}

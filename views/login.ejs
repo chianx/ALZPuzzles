@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" href="logo.png">
+
+    <!-- googe fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        input {
+            margin: auto;
+        }
+
+        .logoimg {
+            width: 130px;
+            height: 100px;
+            padding-top: 0;
+            margin-top: 0;
+        }
+        .logo {
+            padding-top: 20px;
+        }
+    </style>
+
+    
+</head>
+<body id="login-page">
+    <table style="width: 100%;">
+        <tr>
+            <td>
+                <div id="intro-block">
+                    <h1>Fight Alzhiemer with...</h1>
+                    <div class="logo" style="position: relative; right: 50px;">
+                        <img src="images/logo.png" alt="logo-img" class="logoimg inline">
+                        <h2 style="position: relative; bottom: 50px;" class="inline brand-name">ALZ Puzzles</h2>
+                    </div>
+                    <h3>• Train your Brain <br> • Keep your mind active <br> • Slow down your memory loss <br>• Play simple games <br> • Make your old age memorable</h3> 
+            
+                </div>
+            </td>
+            
+            <td>
+                <div class="login-block">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="logo-img" class="logo-img inline">
+                        <h5 class="inline brand-name">ALZ Puzzles</h5>
+                    </div>
+                    <form action="/login" method="POST">
+                        <input type="text" name="username" placeholder=" Username" id="username"> <br>
+                        <input type="password" name="password" placeholder=" Password" id="password"> <br>
+                        <button type="submit" id="login-btn">Login</button>
+                    </form>
+                    <p>Don't have an account? <a href="/signup">signup</a></p>
+                    <br>
+                    <p style="color: red;"><%= errorMessage %></p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+
+    
+</body>
+</html>
