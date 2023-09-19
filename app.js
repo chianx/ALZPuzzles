@@ -64,7 +64,8 @@ function todaysDate() {
 }
 
 app.get("/", function(req, res) {
-    res.render("index");
+    res.json({message: "Hekllo from serveer"})
+    // res.render("index");
     console.log(req.body.required);
     console.log("thats it");
 });
