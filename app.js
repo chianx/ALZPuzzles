@@ -1,7 +1,7 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const ejs = require("ejs");
+import express from "express"
+import bodyParser from "body-parser";
+import mongoose from "mongoose";
+import ejs from "ejs";
 const app = express();
 
 app.use(express.static("public"));
